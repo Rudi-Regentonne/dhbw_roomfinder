@@ -1,0 +1,1590 @@
+{
+  "t": {
+    "size": 88,
+    "Angewandte Informatik": [
+      {
+        "name": "KA-TINF22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF22B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF22B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF22B5",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF22B6",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF23B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF23B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF23B5",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF23B6",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF24B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF24B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF24B5",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF24B6",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF25B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF25B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF25B5",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF25B6",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF26B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF26B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF26B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF26B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF26B5",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      },
+      {
+        "name": "KA-TINF26B6",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Angewandte Informatik"
+      }
+    ],
+    "Elektro- und Informationstechnik": [
+      {
+        "name": "KA-TEI24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektro- und Informationstechnik"
+      },
+      {
+        "name": "KA-TEI24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektro- und Informationstechnik"
+      },
+      {
+        "name": "KA-TEI25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektro- und Informationstechnik"
+      },
+      {
+        "name": "KA-TEI25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektro- und Informationstechnik"
+      }
+    ],
+    "Elektrotechnik": [
+      {
+        "name": "KA-TEL22NT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektrotechnik"
+      },
+      {
+        "name": "KA-TEL23AT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektrotechnik"
+      },
+      {
+        "name": "KA-TEL23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektrotechnik"
+      },
+      {
+        "name": "KA-TEL23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektrotechnik"
+      },
+      {
+        "name": "KA-TEL23NT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Elektrotechnik"
+      }
+    ],
+    "Maschinenbau": [
+      {
+        "name": "KA-TMB22KE1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB22KE2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB22PT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB23KE1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB23KE2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB23PT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      },
+      {
+        "name": "KA-TMB25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Maschinenbau"
+      }
+    ],
+    "Mechatronik": [
+      {
+        "name": "KA-TMT22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Mechatronik"
+      },
+      {
+        "name": "KA-TMT22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Mechatronik"
+      },
+      {
+        "name": "KA-TMT23B1",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Mechatronik"
+      },
+      {
+        "name": "KA-TMT23B2",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Mechatronik"
+      },
+      {
+        "name": "KA-TMT24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Mechatronik"
+      },
+      {
+        "name": "KA-TMT24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Mechatronik"
+      },
+      {
+        "name": "KA-TMT25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Mechatronik"
+      },
+      {
+        "name": "KA-TMT25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Mechatronik"
+      }
+    ],
+    "Sustainable Science and Technology": [
+      {
+        "name": "KA-TSST22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST22B1-AS",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST22B1-ST",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST22B1-UT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST22B2-PT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST22B2-VT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST23B1-AS",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST23B1-ST",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST23B1-UT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST23B2-PT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST23B2-VT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST24B1-AS",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST24B1-ST",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST24B1-UT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST24B2-PT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST24B2-VT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      },
+      {
+        "name": "KA-TSST25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Sustainable Science and Technology"
+      }
+    ],
+    "Wirtschaftsingenieurwesen": [
+      {
+        "name": "KA-TWIW22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Wirtschaftsingenieurwesen"
+      },
+      {
+        "name": "KA-TWIW22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Wirtschaftsingenieurwesen"
+      },
+      {
+        "name": "KA-TWIW23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Wirtschaftsingenieurwesen"
+      },
+      {
+        "name": "KA-TWIW23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Wirtschaftsingenieurwesen"
+      },
+      {
+        "name": "KA-TWIW24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Wirtschaftsingenieurwesen"
+      },
+      {
+        "name": "KA-TWIW24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Wirtschaftsingenieurwesen"
+      },
+      {
+        "name": "KA-TWIW25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Wirtschaftsingenieurwesen"
+      },
+      {
+        "name": "KA-TWIW25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Technik",
+        "degreeName": "Wirtschaftsingenieurwesen"
+      }
+    ]
+  },
+  "w": {
+    "size": 83,
+    "BWL - Bank": [
+      {
+        "name": "KA-WBK22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Bank"
+      },
+      {
+        "name": "KA-WBK22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Bank"
+      },
+      {
+        "name": "KA-WBK23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Bank"
+      },
+      {
+        "name": "KA-WBK23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Bank"
+      },
+      {
+        "name": "KA-WBK24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Bank"
+      },
+      {
+        "name": "KA-WBK24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Bank"
+      },
+      {
+        "name": "KA-WBK25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Bank"
+      },
+      {
+        "name": "KA-WBK25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Bank"
+      }
+    ],
+    "BWL - Digital Business Management": [
+      {
+        "name": "KA-WDBM22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Business Management"
+      },
+      {
+        "name": "KA-WDBM22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Business Management"
+      },
+      {
+        "name": "KA-WDBM23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Business Management"
+      },
+      {
+        "name": "KA-WDBM23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Business Management"
+      },
+      {
+        "name": "KA-WDBM24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Business Management"
+      },
+      {
+        "name": "KA-WDBM24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Business Management"
+      },
+      {
+        "name": "KA-WDBM25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Business Management"
+      },
+      {
+        "name": "KA-WDBM25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Business Management"
+      }
+    ],
+    "BWL - Digital Commerce Management": [
+      {
+        "name": "KA-WDCM22B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Commerce Management"
+      },
+      {
+        "name": "KA-WDCM23B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Commerce Management"
+      },
+      {
+        "name": "KA-WDCM24B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Commerce Management"
+      },
+      {
+        "name": "KA-WDCM25B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Digital Commerce Management"
+      }
+    ],
+    "BWL - Handel": [
+      {
+        "name": "KA-WHD22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD22B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD22B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD23B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD23B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD24B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD24B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      },
+      {
+        "name": "KA-WHD25B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Handel"
+      }
+    ],
+    "BWL - Industrie": [
+      {
+        "name": "KA-WIN22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN22B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN23B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN24B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      },
+      {
+        "name": "KA-WIN25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Industrie"
+      }
+    ],
+    "BWL - Versicherung": [
+      {
+        "name": "KA-WVS22B1",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Versicherung"
+      },
+      {
+        "name": "KA-WVS22B2",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Versicherung"
+      },
+      {
+        "name": "KA-WVS23B1",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Versicherung"
+      },
+      {
+        "name": "KA-WVS23B2",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Versicherung"
+      },
+      {
+        "name": "KA-WVS24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Versicherung"
+      },
+      {
+        "name": "KA-WVS24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Versicherung"
+      },
+      {
+        "name": "KA-WVS25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "BWL - Versicherung"
+      }
+    ],
+    "Data Science und Künstliche Intelligenz": [
+      {
+        "name": "KA-WDS24B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Data Science und Künstliche Intelligenz"
+      },
+      {
+        "name": "KA-WDS25B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Data Science und Künstliche Intelligenz"
+      }
+    ],
+    "Deutsch-Franz. Management": [
+      {
+        "name": "KA-WDFM22B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Deutsch-Franz. Management"
+      }
+    ],
+    "RSW - Steuern u. Prüfungswesen": [
+      {
+        "name": "KA-WSP22B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "RSW - Steuern u. Prüfungswesen"
+      },
+      {
+        "name": "KA-WSP23B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "RSW - Steuern u. Prüfungswesen"
+      },
+      {
+        "name": "KA-WSP24B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "RSW - Steuern u. Prüfungswesen"
+      },
+      {
+        "name": "KA-WSP25B",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "RSW - Steuern u. Prüfungswesen"
+      }
+    ],
+    "Unternehmertum": [
+      {
+        "name": "KA-WUN22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Unternehmertum"
+      },
+      {
+        "name": "KA-WUN23B1",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Unternehmertum"
+      },
+      {
+        "name": "KA-WUN23B2",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Unternehmertum"
+      },
+      {
+        "name": "KA-WUN24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Unternehmertum"
+      },
+      {
+        "name": "KA-WUN25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Unternehmertum"
+      }
+    ],
+    "Wirtschaftsinformatik": [
+      {
+        "name": "KA-WWI22B1",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI22B2",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI22B3",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI22B4",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI22B5",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI23B1",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI23B2",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI23B3",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI23B4",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI23B5",
+        "verified": true,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI23INT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI24B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI24B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI24INT",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI25B3",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      },
+      {
+        "name": "KA-WWI25B4",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Wirtschaft",
+        "degreeName": "Wirtschaftsinformatik"
+      }
+    ]
+  },
+  "g": {
+    "size": 19,
+    "Angew. Gesundheits- und Pflegewissenschaften": [
+      {
+        "name": "KA-GWAG22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Gesundheits- und Pflegewissenschaften"
+      },
+      {
+        "name": "KA-GWAG23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Gesundheits- und Pflegewissenschaften"
+      }
+    ],
+    "Angew. Hebammenwissenschaft": [
+      {
+        "name": "KA-GWAH22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Hebammenwissenschaft"
+      },
+      {
+        "name": "KA-GWAH22B1-PRIMÄR",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Hebammenwissenschaft"
+      },
+      {
+        "name": "KA-GWAH23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Hebammenwissenschaft"
+      },
+      {
+        "name": "KA-GWAH23B1-PRIMÄR",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Hebammenwissenschaft"
+      },
+      {
+        "name": "KA-GWAH24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Hebammenwissenschaft"
+      },
+      {
+        "name": "KA-GWAH24B1-PRIMÄR",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Hebammenwissenschaft"
+      },
+      {
+        "name": "KA-GWAH25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Hebammenwissenschaft"
+      }
+    ],
+    "Angew. Pflege- und Gesundheitswissenschaften": [
+      {
+        "name": "KA-GAGPW24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Pflege- und Gesundheitswissenschaften"
+      },
+      {
+        "name": "KA-GAGPW25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Angew. Pflege- und Gesundheitswissenschaften"
+      }
+    ],
+    "Physician Assistant": [
+      {
+        "name": "KA-GTPA22B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Physician Assistant"
+      },
+      {
+        "name": "KA-GTPA22B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Physician Assistant"
+      },
+      {
+        "name": "KA-GTPA23B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Physician Assistant"
+      },
+      {
+        "name": "KA-GTPA23B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Physician Assistant"
+      }
+    ],
+    "Physiscian Assistant": [
+      {
+        "name": "KA-GPA24B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Physiscian Assistant"
+      },
+      {
+        "name": "KA-GPA24B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Physiscian Assistant"
+      },
+      {
+        "name": "KA-GPA25B1",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Physiscian Assistant"
+      },
+      {
+        "name": "KA-GPA25B2",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Gesundheit",
+        "degreeName": "Physiscian Assistant"
+      }
+    ]
+  },
+  "o": {
+    "size": 1,
+    "Sonstige": [
+      {
+        "name": "KA-INTERNATIONAL-STUDENTS",
+        "verified": false,
+        "visible": true,
+        "hidden": false,
+        "faculty": "Sonstige",
+        "degreeName": "Sonstige"
+      }
+    ]
+  }
+}
