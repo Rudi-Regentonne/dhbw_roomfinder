@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+icalendar = "0.17.5"
+regex = "1.12.2"
 reqwest = "0.12.24"
 scraper = "0.24.0"
 serde = "1.0.228"
