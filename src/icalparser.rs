@@ -8,86 +8,95 @@ use std::{
 
 use icalendar::{Calendar, CalendarComponent, Component, Event, EventLike};
 
-pub fn parse_calendar(filename: &str) -> HashMap<String, Vec<Event>> {
-    let filename = filename;
+use crate::loadingbar::Loadingbar;
 
+pub fn parse_calendar(filename: &str, events: &mut HashMap<(String, String, String), Event>) {
     let contents = read_to_string(Path::new(&filename)).unwrap();
-
+    let re = Regex::new(r"^.*?/.{3}").unwrap();
+    let coursename = re.replace(filename, "").replace(".ics", "");
     let parsed_calendar: Calendar = contents.parse().unwrap();
-
-    let mut events = HashMap::new();
-    let coursename = filename.replace("courses/KA-", "").replace(".ics", "");
     for component in &parsed_calendar.components {
         if let CalendarComponent::Event(event) = component {
-            let mut new_event = event.clone();
-            new_event.append_property(("X-KURS", coursename.as_str()));
-            new_event.append_property(("RESOURCES", coursename.as_str()));
-            let summary = new_event.get_summary().unwrap_or("").to_string();
-            new_event.summary(&format!("{} ({})", summary, coursename));
-            let start = new_event
-                .get_start()
-                .map(|dt| format!("{:?}", dt))
-                .unwrap_or("".to_string());
-
-            let key = format!("{}|{}", summary, start);
-            events.entry(key).or_insert_with(Vec::new).push(new_event);
+            let key = (
+                event.get_summary().unwrap_or("").to_string(),
+                event.get_location().unwrap_or("").to_string(),
+                event
+                    .get_start()
+                    .map(|dt| format!("{:?}", dt))
+                    .unwrap_or("".to_string()),
+            );
+            if let Some(entry) = events.get_mut(&key) {
+                let mut courses: Vec<String> = entry
+                    .property_value("X-KURS")
+                    .unwrap_or("")
+                    .split(", ")
+                    .map(|s| s.to_string())
+                    .collect();
+                if !courses.contains(&coursename) {
+                    courses.push(coursename.clone());
+                    entry.append_property(("X-KURS", courses.join(", ").as_str()));
+                    entry.append_property(("RESOURCES", courses.join(",").as_str()));
+                }
+            } else {
+                let mut new_event = event.clone();
+                new_event.append_property(("X-KURS", coursename.as_str()));
+                new_event.append_property(("RESOURCES", coursename.as_str()));
+                events.insert(key, new_event);
+            }
         }
     }
-    return events;
 }
 
 pub fn parse_all_calendars() -> Result<(), Box<dyn std::error::Error>> {
-    let paths = fs::read_dir("courses").unwrap();
-    let mut events: HashMap<String, Vec<Event>> = Default::default();
+    let paths: Vec<_> = fs::read_dir("courses").unwrap().collect();
+    let mut events: HashMap<(String, String, String), Event> = HashMap::new();
+    let mut bar = Loadingbar::new("Parsing calendars", paths.len());
     for path in paths {
         let coursename = path.unwrap().path().display().to_string();
-        println!("File: {}", coursename);
-
-        let new_events = parse_calendar(&coursename);
-        join_hashmap(&mut events, new_events);
+        parse_calendar(&coursename, &mut events);
+        bar.next();
     }
+    println!();
 
     let mut locations: HashMap<String, Vec<Event>> = HashMap::new();
     let re = Regex::new(r"([a-gA-G]\d{3})").unwrap();
-    for (_key, event_vec) in events {
-        for event in event_vec {
-            //println!("{}", key);
-            if let Some(location) = event.get_location() {
-                let rooms = location.split(", ");
-                for room in rooms {
-                    let roomname = if let Some(caps) = re.captures(room) {
-                        caps[1].to_string()
-                    } else {
-                        room.to_string()
-                    };
-                    if !roomname.is_empty() {
-                        locations
-                            .entry(roomname.to_owned())
-                            .or_insert_with(Vec::new)
-                            .push(event.clone());
-                    }
+    let mut bar = Loadingbar::new("Creating rooms", events.len());
+    for (_key, event) in events {
+        bar.next();
+        if let Some(location) = event.get_location() {
+            let rooms = location.split(", ");
+            for room in rooms {
+                let roomname = if let Some(caps) = re.captures(room) {
+                    caps[1].to_string()
+                } else {
+                    room.to_string()
+                };
+                if !roomname.is_empty() {
+                    locations
+                        .entry(roomname.to_owned())
+                        .or_insert_with(Vec::new)
+                        .push(event.clone());
                 }
             }
         }
     }
+    println!();
     fs::create_dir_all("rooms")?;
+    let mut bar = Loadingbar::new("Writing rooms to file", locations.len());
     for (location, events) in locations {
         let mut calendar = Calendar::new();
         calendar.name(&location);
-        for event in events {
+        for mut event in events {
+            let summary = event.get_summary().unwrap_or("");
+            let courses = event.property_value("X-KURS").unwrap_or("");
+
+            event.summary(format!("{} ({})", summary, courses).as_str());
             calendar.push(event);
         }
         let mut file = File::create(format!("rooms/{}.ics", location.replace("/", "_")))?;
         file.write_all(calendar.to_string().as_bytes())?;
+        bar.next();
     }
+    println!();
     Ok(())
-}
-
-fn join_hashmap(hash1: &mut HashMap<String, Vec<Event>>, hash2: HashMap<String, Vec<Event>>) {
-    for (key, mut events_b) in hash2 {
-        hash1
-            .entry(key)
-            .or_insert_with(Vec::new)
-            .append(&mut events_b);
-    }
 }
