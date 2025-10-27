@@ -18,6 +18,7 @@ struct RoomId {
     floor: u8,
     number: u16,
 }
+
 impl RoomId {
     fn from_str(s: &str) -> Option<Self> {
         let chars: Vec<char> = s.chars().collect();
@@ -43,7 +44,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             Ok(text) => {
                 write_file(text).expect("Error writing file");
             }
-            Err(e) => println!("Fehler: {e}"),
+            Err(e) => println!("Error: {e}"),
         }
     }
     let json_str = fs::read_to_string("data.json").expect("Should have been able to read the file");
