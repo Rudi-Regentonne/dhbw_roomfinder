@@ -1,12 +1,12 @@
+use crate::loadingbar::Loadingbar;
 use chrono::{Duration, Utc};
+use futures::future::join_all;
 use rayon::prelude::*;
 use serde_json::Value;
 use std::fs::{self, File};
 use std::io::{self, Write};
 use std::path::Path;
 use std::u32;
-
-use crate::loadingbar::Loadingbar;
 
 use std::sync::{Arc, Mutex};
 
@@ -50,21 +50,30 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         let json_str =
             fs::read_to_string(COURSES_FILE).expect("Should have been able to read the file");
         let json: Value = serde_json::from_str(&json_str)?;
-        let mut bar = Loadingbar::new("Loading calendars", json.as_array().unwrap().len());
         fs::create_dir_all("courses")?;
-        for coursename in json.as_array().unwrap() {
-            let name = &coursename.to_string()[1..coursename.to_string().len() - 1];
+        let courses = json.as_array().unwrap();
+        let bar = Arc::new(Mutex::new(Loadingbar::new(
+            "Loading calendars",
+            courses.iter().len(),
+        )));
+        let download_futures = courses.iter().map(|coursename| {
+            let name = coursename.to_string();
+            let name = name[1..name.len() - 1].to_string(); //deletes ""
 
-            bar.print(&format!("Downloading: {}.ics", name));
-            let _ = download(&name).await;
+            let bar = Arc::clone(&bar);
+            async move {
+                let _ = download(&name).await;
+                let mut bar = bar.lock().unwrap();
+                bar.print(&format!("Downloading: {}.ics", name));
+                bar.next();
+            }
+        });
 
-            bar.next();
-        }
+        join_all(download_futures).await;
         println!();
 
         icalparser::parse_all_calendars()?;
     }
-    //let destination_room = RoomId::from_str("A266").unwrap();
     let paths: Vec<_> = fs::read_dir("rooms").unwrap().collect();
     let bar = Arc::new(Mutex::new(Loadingbar::new(
         "Finding rooms",
