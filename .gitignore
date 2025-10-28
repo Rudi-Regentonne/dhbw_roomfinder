@@ -1,4 +1,5 @@
 /target
 /courses
 /rooms
-data.json
+courses.json
+config.json

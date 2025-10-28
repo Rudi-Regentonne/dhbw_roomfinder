@@ -1,3 +1,4 @@
+use chrono::{Duration, Utc};
 use rayon::prelude::*;
 use serde_json::Value;
 use std::fs::{self, File};
@@ -9,61 +10,61 @@ use crate::loadingbar::Loadingbar;
 
 use std::sync::{Arc, Mutex};
 
+mod config;
 mod free;
 mod icalparser;
 mod loadingbar;
+use clap::Parser;
+use config::Config;
 
-struct RoomId {
-    block: char,
-    floor: u8,
-    number: u16,
-}
+mod room;
+use room::calc_distance;
 
-impl RoomId {
-    fn from_str(s: &str) -> Option<Self> {
-        let chars: Vec<char> = s.chars().collect();
-        if chars.len() < 3 {
-            return None;
-        }
-        let block = chars[0];
-        let floor = chars[1].to_digit(10)? as u8;
-        let number = s[2..].parse().ok()?;
-        Some(RoomId {
-            block,
-            floor,
-            number,
-        })
-    }
+const COURSES_FILE: &str = "courses.json";
+
+#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
+struct Args {
+    #[arg(short = 'r', long = "room")]
+    room: Option<String>,
+    #[arg(short = 'f', long = "refetch")]
+    refetch: bool,
 }
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    if !Path::new("data.json").exists() {
-        let body = get_json().await;
+    let args = Args::parse();
+
+    let mut config = Config::get_config(args.room)?;
+    let reload = config.last_updated < Utc::now() - Duration::days(1) || args.refetch;
+    if !Path::new(COURSES_FILE).exists() || reload {
+        let body = get_courses().await;
         match body {
             Ok(text) => {
                 write_file(text).expect("Error writing file");
+                config.last_updated = Utc::now();
+                let _ = config.save();
             }
             Err(e) => println!("Error: {e}"),
         }
-    }
-    let json_str = fs::read_to_string("data.json").expect("Should have been able to read the file");
-    let json: Value = serde_json::from_str(&json_str)?;
-    let mut bar = Loadingbar::new("Loading calendars", json.as_array().unwrap().len());
-    fs::create_dir_all("courses")?;
-    for coursename in json.as_array().unwrap() {
-        let name = &coursename.to_string()[1..coursename.to_string().len() - 1];
-        if !Path::new(&(format!("courses/{}.ics", name))).exists() {
+        let json_str =
+            fs::read_to_string(COURSES_FILE).expect("Should have been able to read the file");
+        let json: Value = serde_json::from_str(&json_str)?;
+        let mut bar = Loadingbar::new("Loading calendars", json.as_array().unwrap().len());
+        fs::create_dir_all("courses")?;
+        for coursename in json.as_array().unwrap() {
+            let name = &coursename.to_string()[1..coursename.to_string().len() - 1];
+
             bar.print(&format!("Downloading: {}.ics", name));
             let _ = download(&name).await;
-        } else {
-            bar.print(&format!("File exists for: {}", name));
+
+            bar.next();
         }
-        bar.next();
+        println!();
+
+        icalparser::parse_all_calendars()?;
     }
-    println!();
-    icalparser::parse_all_calendars()?;
-    let destination_room = RoomId::from_str("A266").unwrap();
+    //let destination_room = RoomId::from_str("A266").unwrap();
     let paths: Vec<_> = fs::read_dir("rooms").unwrap().collect();
     let bar = Arc::new(Mutex::new(Loadingbar::new(
         "Finding rooms",
@@ -81,7 +82,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .replace(".ics", "")
                 .replace("rooms/", "");
             if free::is_free(&roomname) {
-                let new_distance = calc_distance(&destination_room, &roomname);
+                let new_distance = calc_distance(&config.room, &roomname);
                 let mut bar = bar.lock().unwrap();
                 bar.next();
                 return (roomname, new_distance);
@@ -92,6 +93,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         })
         .collect();
     min_keys.sort_by_key(|(_, dist)| *dist);
+    println!("neares rooms from {} are: ", config.room.to_string());
     for (roomname, distance) in min_keys.iter().take(5) {
         println!("{} (distance: {})", roomname, distance);
     }
@@ -99,19 +101,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-fn calc_distance(destination: &RoomId, room: &str) -> u32 {
-    if let Some(room_id) = RoomId::from_str(&room) {
-        let distance = ((room_id.block as i32 - destination.block as i32).abs() * 1000
-            + (room_id.floor as i32 - destination.floor as i32).abs() * 100
-            + (room_id.number as i32 - destination.number as i32).abs())
-            as u32;
-
-        return distance;
-    }
-    return u32::MAX;
-}
-
-async fn get_json() -> Result<String, reqwest::Error> {
+async fn get_courses() -> Result<String, reqwest::Error> {
     let body = reqwest::get("https://api.dhbw.app/courses/KA/")
         .await?
         .text()
@@ -120,7 +110,7 @@ async fn get_json() -> Result<String, reqwest::Error> {
 }
 
 fn write_file(contents: String) -> io::Result<()> {
-    let mut file = File::create("data.json")?;
+    let mut file = File::create(COURSES_FILE)?;
     file.write_all(contents.as_bytes())?;
     Ok(())
 }
