@@ -8,7 +8,7 @@ pub struct Loadingbar {
 
 impl Loadingbar {
     pub fn new(label: &str, size: usize) -> Self {
-        Loadingbar {
+        let loadingbar = Loadingbar {
             label: label.to_owned(),
             progress: 0,
             size: size.to_owned(),
@@ -16,32 +16,28 @@ impl Loadingbar {
                 .map(|(Width(w), _)| w as usize)
                 .unwrap_or(20)
                 / 2,
-        }
+        };
+
+        return loadingbar;
     }
     pub fn next(&mut self) {
         self.progress += 1;
+        self.print_bar();
+    }
+    pub fn print(&mut self, text: &str) {
+        println!("\r\r\x1b[K{}", text);
+
+        self.print_bar();
+    }
+    fn print_bar(&self) {
         let length = (self.progress) * (self.width - 3) / (self.size);
         print!(
-            "\r{}{}[{}>{}]",
+            "\r\r\x1b[K{}{}[{}>{}]", // delete line
             self.label,
             " ".repeat(self.width - self.label.len()),
             "=".repeat(length),
             " ".repeat(self.width - length - 3)
         );
-
-        std::io::Write::flush(&mut std::io::stdout()).unwrap();
-    }
-    pub fn print(&mut self, text: &str) {
-        print!("\r\x1b[K"); //delete line
-        println!("{}", text);
-        let length = (self.progress) * (self.width) / (self.size);
-        print!(
-            "\r{} [{}{}]",
-            self.label,
-            "#".repeat(length),
-            "-".repeat(self.width - length)
-        );
-
         std::io::Write::flush(&mut std::io::stdout()).unwrap();
     }
 }

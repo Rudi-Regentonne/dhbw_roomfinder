@@ -21,11 +21,12 @@ impl RoomId {
             number,
         })
     }
+    #[allow(dead_code)]
     pub fn to_string(&self) -> String {
         return format!("{}{}{}", self.block, self.floor, self.number);
     }
 }
-
+#[allow(dead_code)]
 pub fn calc_distance(destination: &RoomId, room: &str) -> u32 {
     if let Some(room_id) = RoomId::from_str(&room) {
         let distance = ((room_id.block as i32 - destination.block as i32).abs() * 1000
