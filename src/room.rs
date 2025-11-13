@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+/// Represents a room identifier consisting of block (char), floor (u8), and room number (u16).
 #[derive(Serialize, Deserialize, Debug)]
 pub struct RoomId {
     pub block: char,
@@ -7,6 +8,8 @@ pub struct RoomId {
 }
 
 impl RoomId {
+    /// Parses a string like "B3025" into a RoomId.
+    /// Returns None on invalid format.
     pub fn from_str(s: &str) -> Option<Self> {
         let chars: Vec<char> = s.chars().collect();
         if chars.len() < 3 {
@@ -21,11 +24,19 @@ impl RoomId {
             number,
         })
     }
+
+    /// Serializes the RoomId back into a string (e.g. "B3025").
     #[allow(dead_code)]
     pub fn to_string(&self) -> String {
-        return format!("{}{}{}", self.block, self.floor, self.number);
+        format!("{}{}{}", self.block, self.floor, self.number)
     }
 }
+
+/// Calculates a simple distance score between two RoomIds.
+/// Returns u32::MAX if room string cannot be parsed.
+/// - block difference weighted by 1000
+/// - floor difference weighted by 100
+/// - room number absolute difference
 #[allow(dead_code)]
 pub fn calc_distance(destination: &RoomId, room: &str) -> u32 {
     if let Some(room_id) = RoomId::from_str(&room) {
@@ -36,5 +47,5 @@ pub fn calc_distance(destination: &RoomId, room: &str) -> u32 {
 
         return distance;
     }
-    return u32::MAX;
+    u32::MAX
 }

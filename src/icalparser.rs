@@ -9,7 +9,10 @@ use std::{
 use icalendar::{Calendar, CalendarComponent, Component, Event, EventLike};
 
 use crate::loadingbar::Loadingbar;
-
+/// Parses a single calendar file, extracting events and associating them with course names.
+/// Updates the events map with merged or new events as needed.
+/// - `filename`: Path to the calendar file (.ics)
+/// - `events`: Mutable HashMap to collect unique events
 pub fn parse_calendar(filename: &str, events: &mut HashMap<(String, String, String), Event>) {
     let contents = read_to_string(Path::new(&filename)).unwrap();
     let re = Regex::new(r"^.*?/.{3}").unwrap();
@@ -46,7 +49,10 @@ pub fn parse_calendar(filename: &str, events: &mut HashMap<(String, String, Stri
         }
     }
 }
-
+/// Parses all calendar files in the "courses" directory and groups events by rooms.
+/// Writes one *.ics file per room to the "rooms" directory.
+/// Uses a loading bar to indicate progress for parsing, grouping, and writing.
+/// Returns Ok(()) on success or an error if file I/O fails.
 pub fn parse_all_calendars() -> Result<(), Box<dyn std::error::Error>> {
     let paths: Vec<_> = fs::read_dir("courses").unwrap().collect();
     let mut events: HashMap<(String, String, String), Event> = HashMap::new();
