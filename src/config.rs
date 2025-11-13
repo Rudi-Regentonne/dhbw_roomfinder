@@ -10,6 +10,8 @@ use crate::room::RoomId;
 
 const CONFIG_FILE: &str = "config.json";
 
+/// Configuration struct holds the selected room and last updated time.
+/// Provides methods to load and save configuration from a JSON file.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Config {
     pub room: RoomId,
@@ -17,6 +19,9 @@ pub struct Config {
 }
 
 impl Config {
+    /// Loads configuration from config.json.
+    /// If the file exists, loads it and applies an optional room update.
+    /// If not, creates a default config (optionally with specified room) and saves it.
     pub fn get_config(room: Option<String>) -> io::Result<Self> {
         if Path::new(CONFIG_FILE).exists() {
             let mut file = File::open(CONFIG_FILE)?;
@@ -56,7 +61,7 @@ impl Config {
             }
         }
     }
-
+    /// Saves configuration struct to config.json in pretty JSON format.
     pub fn save(&self) -> io::Result<()> {
         let json_string = serde_json::to_string_pretty(&self)
             .map_err(|e| io::Error::new(io::ErrorKind::Other, e))?;

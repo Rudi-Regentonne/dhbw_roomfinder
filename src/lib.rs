@@ -1,6 +1,7 @@
 use crate::loadingbar::Loadingbar;
 use crate::room::RoomId;
 
+use chrono::NaiveDateTime;
 use rayon::prelude::*;
 use serde_json::Value;
 use std::fs::{self, File};
@@ -20,10 +21,18 @@ use room::calc_distance;
 
 const COURSES_FILE: &str = "courses.json";
 
+/// Finds and returns a sorted list of available rooms closest to the given room at the specified time.
+/// Optionally reloads data and calendars if requested or missing.
+/// - `reload`: If true, fetches all course and calendar data anew.
+/// - `roomname`: The reference room name to find closest rooms to.
+/// - `room_count`: Maximum number of available rooms to return.
+/// - `datetime`: The desired date and time for room availability.
+/// Returns a `Vec` of (room name, distance) tuples sorted by distance, or an error if roomname is invalid.
 pub async fn get_rooms(
     reload: bool,
     roomname: &str,
     room_count: usize,
+    datetime: NaiveDateTime,
 ) -> Result<Vec<(String, u32)>, Box<dyn std::error::Error>> {
     if let Some(destination_room) = RoomId::from_str(roomname) {
         if !Path::new(COURSES_FILE).exists() || reload {
@@ -78,7 +87,7 @@ pub async fn get_rooms(
                     .to_string()
                     .replace(".ics", "")
                     .replace("rooms/", "");
-                if free::is_free(&roomname) {
+                if free::is_free(&roomname, datetime) {
                     let new_distance = calc_distance(&destination_room, &roomname);
                     let mut bar = bar.lock().unwrap();
                     bar.next();
@@ -96,6 +105,8 @@ pub async fn get_rooms(
         return Err(format!("{} is not a valid roomname", roomname).into());
     }
 }
+
+/// Asynchronously fetches course names from the DHBW API endpoint and returns as a JSON string.
 async fn get_courses() -> Result<String, reqwest::Error> {
     let body = reqwest::get("https://api.dhbw.app/courses/KA/")
         .await?
@@ -104,12 +115,17 @@ async fn get_courses() -> Result<String, reqwest::Error> {
     Ok(body)
 }
 
+/// Writes input string contents to COURSES_FILE ("courses.json").
 fn write_file(contents: String) -> io::Result<()> {
     let mut file = File::create(COURSES_FILE)?;
     file.write_all(contents.as_bytes())?;
     Ok(())
 }
 
+/// Downloads an .ics calendar file from the given url, retrying up to max_retries on failure.
+/// - `name`: The course/calendar name.
+/// - `max_retries`: Maximum number of download attempts before error.
+/// Returns Ok on success, or an error after repeated failures.
 async fn download_with_retry(
     name: &str,
     max_retries: u8,
