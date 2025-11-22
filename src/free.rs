@@ -29,7 +29,7 @@ pub fn todays_events(path: &str) {
 /// or if only all-day events are present on the same date.
 /// - `path`: The room identifier (filename in rooms/)
 /// - `datetime`: The local date and time to check
-pub fn is_free(path: &str, datetime: NaiveDateTime) -> bool {
+pub fn is_free(path: &str, start_time: NaiveDateTime, enddatetime: NaiveDateTime) -> bool {
     let content = fs::read_to_string(format!("rooms/{}.ics", path)).unwrap();
     let calendar: Calendar = content.parse().unwrap();
 
@@ -42,7 +42,7 @@ pub fn is_free(path: &str, datetime: NaiveDateTime) -> bool {
                         CalendarDateTime::Floating(naive_dt) => naive_dt,
                         CalendarDateTime::WithTimezone { date_time, .. } => date_time,
                     },
-                    DatePerhapsTime::Date(date) => return date == datetime.date(),
+                    DatePerhapsTime::Date(date) => return date == start_time.date(),
                 };
 
                 let end = match dtend {
@@ -52,11 +52,13 @@ pub fn is_free(path: &str, datetime: NaiveDateTime) -> bool {
                         CalendarDateTime::WithTimezone { date_time, .. } => date_time,
                     },
                     DatePerhapsTime::Date(date) => {
-                        return date == datetime.date();
+                        return date == start_time.date();
                     }
                 };
 
-                return (start >= datetime || end >= datetime) && end.date() == datetime.date();
+                return (start >= start_time || end >= start_time)
+                    && (start <= enddatetime || end <= enddatetime)
+                    || (start <= start_time && start_time <= end);
             }
         }
         false
