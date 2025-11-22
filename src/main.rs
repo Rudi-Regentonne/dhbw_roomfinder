@@ -28,8 +28,10 @@ struct Args {
     refetch: bool,
     #[arg(short = 'd', long = "day", value_parser = parse_date)]
     date: Option<NaiveDate>,
-    #[arg(short = 't', long = "time", value_parser = parse_time)]
+    #[arg(short = 't', long = "startTime", value_parser = parse_time)]
     time: Option<NaiveTime>,
+    #[arg(short = 'e', long = "endTime", value_parser = parse_time)]
+    end_time: Option<NaiveTime>,
 }
 mod room;
 
@@ -50,23 +52,45 @@ async fn main() {
     }
 
     // Default to current local datetime
-    let mut datetime = Local::now().naive_local();
+    let mut start_time = Local::now().naive_local();
+    let mut enddatetime = (start_time.date() + Duration::days(1))
+        .and_hms_opt(0, 0, 0)
+        .unwrap();
+    println!(
+        "{},{};{},{}",
+        start_time.date(),
+        start_time.time(),
+        enddatetime.date(),
+        enddatetime.time()
+    );
 
     // Apply user-specified date, if any
     if let Some(date) = args.date {
         println!("{}", date);
-        datetime = NaiveDateTime::new(date, datetime.time());
+        start_time = NaiveDateTime::new(date, start_time.time());
     }
     // Apply user-specified time, if any
     if let Some(time) = args.time {
         println!("{}", time);
-        datetime = NaiveDateTime::new(datetime.date(), time);
+        start_time = NaiveDateTime::new(start_time.date(), time);
     }
-
+    if let Some(time) = args.end_time {
+        println!("{}", time);
+        enddatetime = NaiveDateTime::new(start_time.date(), time);
+    }
+    if start_time > enddatetime {
+        start_time = enddatetime;
+    }
     // Query and print nearest available rooms
-    let keys = get_rooms(reload, &config.room.to_string(), 10, datetime)
-        .await
-        .expect("Fehler bei get_rooms");
+    let keys = get_rooms(
+        reload,
+        &config.room.to_string(),
+        10,
+        start_time,
+        enddatetime,
+    )
+    .await
+    .expect("Fehler bei get_rooms");
     println!("neares rooms from {} are: ", config.room.to_string());
     for (roomname, distance) in keys {
         println!("{} (distance: {})", roomname, distance);

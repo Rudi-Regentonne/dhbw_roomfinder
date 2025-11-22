@@ -32,7 +32,8 @@ pub async fn get_rooms(
     reload: bool,
     roomname: &str,
     room_count: usize,
-    datetime: NaiveDateTime,
+    start_time: NaiveDateTime,
+    enddatetime: NaiveDateTime,
 ) -> Result<Vec<(String, u32)>, Box<dyn std::error::Error>> {
     if let Some(destination_room) = RoomId::from_str(roomname) {
         if !Path::new(COURSES_FILE).exists() || reload {
@@ -87,7 +88,7 @@ pub async fn get_rooms(
                     .to_string()
                     .replace(".ics", "")
                     .replace("rooms/", "");
-                if free::is_free(&roomname, datetime) {
+                if free::is_free(&roomname, start_time, enddatetime) {
                     let new_distance = calc_distance(&destination_room, &roomname);
                     let mut bar = bar.lock().unwrap();
                     bar.next();
