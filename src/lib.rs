@@ -84,10 +84,12 @@ pub async fn get_rooms(
                     .as_ref()
                     .unwrap()
                     .path()
+                    .file_name()
+                    .unwrap()
                     .display()
                     .to_string()
-                    .replace(".ics", "")
-                    .replace("rooms/", "");
+                    .replace(".ics", "");
+
                 if free::is_free(&roomname, start_time, enddatetime) {
                     let new_distance = calc_distance(&destination_room, &roomname);
                     let mut bar = bar.lock().unwrap();
